@@ -53,6 +53,10 @@ namespace oops
             this.picClose.Size = new System.Drawing.Size(100, 50);
             this.picClose.TabIndex = 0;
             this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            this.picClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picClose_MouseDown);
+            this.picClose.MouseLeave += new System.EventHandler(this.picClose_MouseLeave);
+            this.picClose.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picClose_MouseMove);
             // 
             // Form4
             // 
