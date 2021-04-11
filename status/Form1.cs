@@ -62,5 +62,10 @@ namespace status
             G.DrawString(iCPU.ToString() + "%", F, Brushes.DarkRed,
                 plBar.Width / 2 - 17, plBar.Height / 4);
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            checkThread.Abort(); //checkThread 스레드 프로세스 종료
+        }
     }
 }
