@@ -39,7 +39,7 @@ namespace status
             {
                 iCPU = (int)oCPU.NextValue();
                 this.Text = "CPU 사용: " + iCPU.ToString() + "%";
-                iCPU = iCPU * 3;
+                iCPU *= 3;
                 plBar.Invalidate();
                 Thread.Sleep(1000);
             }
