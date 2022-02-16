@@ -31,7 +31,7 @@ namespace NetStat
             InitializeComponent();
         }
 
-        private void lvNetState_SelectedIndexChanged(object sender, EventArgs e)
+        private void LvNetState_SelectedIndexChanged(object sender, EventArgs e)
         {
             OnView = new OnConnViewDelegate(OnNewView);
             NetThread = new Thread(NetView);
