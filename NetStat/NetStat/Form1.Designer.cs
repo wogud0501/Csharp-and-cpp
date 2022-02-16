@@ -1,5 +1,5 @@
 ﻿
-namespace mook_NetStat
+namespace NetStat
 {
     partial class Form1
     {

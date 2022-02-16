@@ -12,31 +12,31 @@ using System.Net.NetworkInformation;
 using System.Threading;
 using System.IO;
 
-namespace mook_NetStat
+namespace NetStat
 {
     public partial class Form1 : Form
     {
-        IPGlobalProperties ipProperties =
+        IPGlobalProperties ipProperites =
             IPGlobalProperties.GetIPGlobalProperties();
         Thread NetThread = null;
         string LocPort, RemoAdd, RemoPort;
         bool CheckBool = true;
-
-        private delegate void OnConnViewDelegate(bool flags, string[] AddInfo); //델리게이트 선언
-        private OnConnViewDelegate OnView = null;  //델리게이트 개체 생성
+        // 델리게이트 선언
+        private delegate void OnConnViewDelegate(bool flags, string[] AddInfo);
+        // 델리게이트 개체 생성
+        private OnConnViewDelegate OnView = null;
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void lvNetState_SelectedIndexChanged(object sender, EventArgs e)
         {
             OnView = new OnConnViewDelegate(OnNewView);
             NetThread = new Thread(NetView);
             NetThread.Start();
         }
-
         private void NetView()
         {
             while (true)
@@ -45,7 +45,7 @@ namespace mook_NetStat
                 NCheck();
                 OnView.Invoke(true, null);
                 TcpConnectionInformation[] tcpConnections =
-                ipProperties.GetActiveTcpConnections();
+                ipProperites.GetActiveTcpConnections();
                 int i = 0;
                 foreach (TcpConnectionInformation NetInfo in tcpConnections)
                 {
@@ -62,7 +62,6 @@ namespace mook_NetStat
                 Thread.Sleep(30000);
             }
         }
-
         private void OnNewView(bool flags, string[] AddInfo)
         {
             if (flags == true)
@@ -75,7 +74,6 @@ namespace mook_NetStat
                 this.lvNetState.Items[i].SubItems.Add(AddInfo[2]);
                 this.lvNetState.Items[i].SubItems.Add(AddInfo[3]);
                 this.lvNetState.Items[i].SubItems.Add(AddInfo[4]);
-
                 if (AddInfo[1] == LocPort)
                     this.lvNetState.Items[i].SubItems[0].BackColor = Color.GreenYellow;
                 if (AddInfo[2] == RemoAdd)
@@ -84,7 +82,6 @@ namespace mook_NetStat
                     this.lvNetState.Items[i].SubItems[0].BackColor = Color.Aqua;
             }
         }
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (NetThread != null)
@@ -146,5 +143,6 @@ namespace mook_NetStat
                 sw.Close();
             }
         }
+
     }
 }
