@@ -16,5 +16,10 @@ namespace NetStat
         {
             InitializeComponent();
         }
+
+        private void lvNetState_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
