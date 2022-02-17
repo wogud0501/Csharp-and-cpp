@@ -29,22 +29,93 @@ namespace Wifi_Scanner
         /// </summary>
         private void InitializeComponent()
         {
+            this.lvAP = new System.Windows.Forms.ListView();
+            this.chSSID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chQuality = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chEnabled = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chChannel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chAlgorithm = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chAuth = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chMAC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
+            // 
+            // lvAP
+            // 
+            this.lvAP.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chSSID,
+            this.chQuality,
+            this.chEnabled,
+            this.chChannel,
+            this.chAlgorithm,
+            this.chAuth,
+            this.chMAC});
+            this.lvAP.FullRowSelect = true;
+            this.lvAP.GridLines = true;
+            this.lvAP.HideSelection = false;
+            this.lvAP.Location = new System.Drawing.Point(12, 12);
+            this.lvAP.Name = "lvAP";
+            this.lvAP.Size = new System.Drawing.Size(660, 440);
+            this.lvAP.TabIndex = 0;
+            this.lvAP.UseCompatibleStateImageBehavior = false;
+            this.lvAP.View = System.Windows.Forms.View.Details;
+            // 
+            // chSSID
+            // 
+            this.chSSID.Text = "이름";
+            this.chSSID.Width = 100;
+            // 
+            // chQuality
+            // 
+            this.chQuality.Text = "신호강도";
+            // 
+            // chEnabled
+            // 
+            this.chEnabled.Text = "암호화";
+            // 
+            // chChannel
+            // 
+            this.chChannel.Text = "채널";
+            // 
+            // chAlgorithm
+            // 
+            this.chAlgorithm.Text = "암호화방식";
+            this.chAlgorithm.Width = 80;
+            // 
+            // chAuth
+            // 
+            this.chAuth.Text = "인증방식";
+            this.chAuth.Width = 100;
+            // 
+            // chMAC
+            // 
+            this.chMAC.Text = "MAC";
+            this.chMAC.Width = 170;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(684, 468);
+            this.Controls.Add(this.lvAP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Wifi Scanner";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ListView lvAP;
+        private System.Windows.Forms.ColumnHeader chSSID;
+        private System.Windows.Forms.ColumnHeader chQuality;
+        private System.Windows.Forms.ColumnHeader chEnabled;
+        private System.Windows.Forms.ColumnHeader chChannel;
+        private System.Windows.Forms.ColumnHeader chAlgorithm;
+        private System.Windows.Forms.ColumnHeader chAuth;
+        private System.Windows.Forms.ColumnHeader chMAC;
     }
 }
 

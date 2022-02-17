@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NativeWifi;
+using System.Threading;
 
 namespace Wifi_Scanner
 {
@@ -15,6 +17,11 @@ namespace Wifi_Scanner
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
