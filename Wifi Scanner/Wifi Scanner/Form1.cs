@@ -27,7 +27,9 @@ namespace Wifi_Scanner
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            OnView = new OnWifiViewDelegate(OnWifiList);
+            thrAP = new Thread(ThreadList);
+            thrAP.Start();
         }
         private void ThreadList()
         {
@@ -148,6 +150,12 @@ namespace Wifi_Scanner
             return Encoding.ASCII.GetString(ssid.SSID,
                 0, (int)ssid.SSIDLength);
         }
-        
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (this.thrAP != null)
+                thrAP.Abort();
+            Application.ExitThread();
+        }
     }
 }
