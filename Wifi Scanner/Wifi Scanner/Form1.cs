@@ -68,7 +68,11 @@ namespace Wifi_Scanner
                 this.lvAP.Items.Add(lvt);
             }
         }
+<<<<<<< HEAD
         private string GetMacChannel(int i, string Name)
+=======
+        private void GetMacChannel(int i, string Name)
+>>>>>>> main
         {
             Wlan.WlanBssEntry[] IstWlanBss =
                 wlanClient.Interfaces[0].GetNetworkBssList();
@@ -104,6 +108,7 @@ namespace Wifi_Scanner
                             case "2432000":
                                 reAP = "5";
                                 break;
+<<<<<<< HEAD
                             case "2437000":
                                 reAP = "6";
                                 break;
@@ -134,6 +139,12 @@ namespace Wifi_Scanner
                 
             }
             return reAP;
+=======
+                        }
+                    }
+                }
+            }
+>>>>>>> main
         }
 
         private string ConvertToMAC(byte[] MAC)
@@ -143,11 +154,14 @@ namespace Wifi_Scanner
                 strMAC += MAC[index].ToString("X2") + "-";
             return strMAC.Substring(0, strMAC.Length - 1);
         }
+<<<<<<< HEAD
         static string GetStringForSSID(Wlan.Dot11Ssid ssid)
         {
             return Encoding.ASCII.GetString(ssid.SSID,
                 0, (int)ssid.SSIDLength);
         }
+=======
+>>>>>>> main
         
     }
 }
