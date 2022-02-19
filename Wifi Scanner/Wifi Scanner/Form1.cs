@@ -56,7 +56,7 @@ namespace Wifi_Scanner
             }
         }
         private void OnWifiList(bool flags, object[] AddWifi)
-        {
+        {   
             if (flags == true)
                 this.lvAP.Items.Clear();
             else
