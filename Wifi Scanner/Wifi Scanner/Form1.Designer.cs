@@ -58,6 +58,7 @@ namespace Wifi_Scanner
             this.lvAP.TabIndex = 0;
             this.lvAP.UseCompatibleStateImageBehavior = false;
             this.lvAP.View = System.Windows.Forms.View.Details;
+            this.lvAP.SelectedIndexChanged += new System.EventHandler(this.lvAP_SelectedIndexChanged);
             // 
             // chSSID
             // 

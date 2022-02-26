@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="ManagedWifi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\ManagedWifi.dll</HintPath>
+      <HintPath>..\..\..\..\..\Dropbox\PC\Desktop\프로그래밍 소스\repos-master\Wifi Scanner\Wifi Scanner\bin\Debug\ManagedWifi.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -157,5 +157,10 @@ namespace Wifi_Scanner
                 thrAP.Abort();
             Application.ExitThread();
         }
+
+        private void lvAP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
