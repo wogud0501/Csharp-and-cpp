@@ -41,6 +41,7 @@ namespace IPViewer
             this.lbIp.Name = "lbIp";
             this.lbIp.Size = new System.Drawing.Size(370, 280);
             this.lbIp.TabIndex = 0;
+            this.lbIp.SelectedIndexChanged += new System.EventHandler(this.lbIp_SelectedIndexChanged);
             // 
             // btnOk
             // 

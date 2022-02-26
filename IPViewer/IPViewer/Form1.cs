@@ -43,5 +43,10 @@ namespace IPViewer
                     "오류 메시지", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void lbIp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
