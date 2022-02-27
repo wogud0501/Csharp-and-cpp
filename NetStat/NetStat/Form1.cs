@@ -102,6 +102,11 @@ namespace NetStat
 
         }
 
+        private void lvNetState_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void NCheck()
         {
             if (CheckBool)

@@ -73,6 +73,7 @@ namespace NetStat
             this.lvNetState.TabIndex = 0;
             this.lvNetState.UseCompatibleStateImageBehavior = false;
             this.lvNetState.View = System.Windows.Forms.View.Details;
+            this.lvNetState.SelectedIndexChanged += new System.EventHandler(this.lvNetState_SelectedIndexChanged_1);
             // 
             // clhLocalIP
             // 
