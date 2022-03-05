@@ -33,5 +33,11 @@ int main()
     std::cout << "\n\n사각형은 : " << std::endl;
     std::transform(std::begin(data), std::end(data),
         std::ostream_iterator<double>(std::cout, " "), op);
+
+    // 다른 람다 표현식을 호출하는 람다 표현식을 인수로 사용하기
+    std::cout << "\n\n4th powers are:" << std::endl;
+    std::transform(std::begin(data), std::end(data),
+        std::ostream_iterator<double>(std::cout, " "), [&op](double x) {return op(x) * op(x); });
+    std::cout << std::endl;
 }
 
