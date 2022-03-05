@@ -40,4 +40,32 @@ int main()
     for (const auto& w : weight_lbs)
         std::cout << std::setw(5) << w << " |";
     std::cout << std::endl;
+
+    // 표 제목 다음에 선 출력
+    for (size_t i{ 1 }; i < wt_count; ++i)
+        std::cout << "--------";
+    std::cout << std::endl;
+
+    double bmi {};                               // BMI 저장용
+    unsigned int feet {};                        // 출력에 쓸 전체 피트 값
+    unsigned int inches {};                      // 출렉에 쓸 전체 인치 값
+    const unsigned int inches_per_foot { 12U };
+    for (const auto& h : height_ins)
+    {
+        feet = h / inches_per_foot;
+        inches = h % inches_per_foot;
+        std::cout << std::setw(2) << feet << "'" << std::setw(2) << inches << "\"" << "|";
+        std::cout << std::fixed << std::setprecision(1);
+        for (const auto& w : weight_lbs)
+        {
+            bmi = h / ins_per_m;
+            bmi = (w / lbs_per_kg) / (bmi * bmi);
+            std::cout << std::setw(2) << " " << bmi << " |";
+        }
+        std::cout << std::endl;
+    }
+    // 표 다음에 선을 출력
+    for (size_t i{ 1 }; i < wt_count; ++i)
+        std::cout << "---------";
+    std::cout << "\nBMI 18.5~24.9는 정상 입니다." << std::endl;
 }
