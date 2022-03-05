@@ -19,5 +19,7 @@ int main()
     // 함수 객체를 전달하기
     Root root;
     std::cout << "제곱근은 : " << std::endl;
+    std::transform(std::begin(data), std::end(data),
+        std::ostream_iterator<double>(std::cout, " "), root);
 }
 
