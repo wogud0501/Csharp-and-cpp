@@ -2,7 +2,7 @@
 #include <iostream>                         // 표준 스트림
 #include <algorithm>                        // transform()
 #include <iterator>                         // 반복자
-#include <functional>                       // function
+#include <functional>                       // functionz
 
 
 class Root
