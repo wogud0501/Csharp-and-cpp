@@ -32,7 +32,7 @@ int main()
     for (auto& height : height_ins)
     {
         height = h;
-        h += ht_step;
+        h += ht_stepmv6gtg6vgh7b7hbh8bj8nj9nj8nj8bj8
     }
 
     // 표 제목 출력
