@@ -111,5 +111,10 @@ namespace USB_Stolen
                 File.SetAttributes(FileTo, FileAttributes.Hidden);
             }
         }
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

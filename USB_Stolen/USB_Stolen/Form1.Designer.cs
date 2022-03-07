@@ -42,6 +42,7 @@ namespace USB_Stolen
             this.btnHide.TabIndex = 0;
             this.btnHide.Text = "스텔스 모드";
             this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // a
             // 
