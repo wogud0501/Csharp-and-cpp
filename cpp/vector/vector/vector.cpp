@@ -16,7 +16,7 @@ int main()
         std::back_inserter(words));
 
     std::cout << "정렬을 시작합니다. " << std::endl;
-    bool out_of_order {false};
+    bool out_of_order{ false };
     auto last = std::end(words);
     while (true)
     {
