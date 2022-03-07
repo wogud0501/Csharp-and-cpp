@@ -53,5 +53,10 @@ namespace DnsLookUp
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void listAddr_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

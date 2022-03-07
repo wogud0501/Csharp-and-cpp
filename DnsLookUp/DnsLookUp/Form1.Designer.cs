@@ -81,6 +81,7 @@ namespace DnsLookUp
             this.listAddr.Name = "listAddr";
             this.listAddr.Size = new System.Drawing.Size(529, 100);
             this.listAddr.TabIndex = 4;
+            this.listAddr.SelectedIndexChanged += new System.EventHandler(this.listAddr_SelectedIndexChanged);
             // 
             // Form1
             // 
