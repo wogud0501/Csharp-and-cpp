@@ -2,7 +2,7 @@
 #include <string>                                                          // stirng 타입
 #include <algorithm>                                                       // swap()과 copy() 함수
 #include <vector>                                                          // 백터
-#include <iterator>                                                        // 반복자
+#include <iterator>                                                       // 반복자
 using std::string;
 using std::vector;
 
