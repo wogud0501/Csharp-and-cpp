@@ -25,7 +25,13 @@ public:
 		return value;
 		Numeric_Iterator& operator++()
 		{
-			if(value == static_cast)
+			if (value == static_cast<T>(range.start + range.count * range.step))
+			{
+				throw std::logic_error("Can't increment an end iterator.");
+			}
+			auto temp = *this;
+			value += range.step;
+			return temp;
 		}
 	}
 };
