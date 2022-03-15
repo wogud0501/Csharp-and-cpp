@@ -90,5 +90,10 @@ namespace study1
                 flag03 = false;
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
