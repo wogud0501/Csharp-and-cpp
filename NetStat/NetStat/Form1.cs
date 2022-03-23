@@ -107,6 +107,11 @@ namespace NetStat
 
         }
 
+        private void btnCheck_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void NCheck()
         {
             if (CheckBool)
