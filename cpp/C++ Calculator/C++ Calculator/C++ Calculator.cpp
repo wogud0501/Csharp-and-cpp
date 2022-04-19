@@ -1,7 +1,7 @@
 ﻿// 스트림 반복자 사용하기
-#include <numeric>                                       // accumulate() 함수 - 범위에 속한 원소들의 합계
-#include <iterator>                                      // istream_iterator
-#include <iostream>                                      //
+#include <numeric>;                                        // accumulate() 함수 - 범위에 속한 원소들의 합계
+#include <iterator>;                                      // istream_iterator
+#include <iostream>;                                      //
 
 int main()
 {
