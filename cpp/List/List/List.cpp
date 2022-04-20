@@ -31,7 +31,7 @@ int main()
 	list_elements(std::rbegin(proverbs), std::rend(proverbs));
 
 	proverbs.sort();
-	std::cout << "\nYout proverbs in ascending sequence are:" << std::endl;
+	std::cout << "\nYour proverbs in ascending sequence are:" << std::endl;
 	list_elements(std::begin(proverbs), std::end(proverbs));
 
 	proverbs.sort(std::greater<>());
