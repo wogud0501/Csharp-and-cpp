@@ -15,13 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="C.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="CC.c">
+    <ClCompile Include="Soruce.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
