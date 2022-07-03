@@ -31,7 +31,7 @@ namespace USB_Stolen
         {
             this.components = new System.ComponentModel.Container();
             this.btnHide = new System.Windows.Forms.Button();
-            this.a = new System.Windows.Forms.NotifyIcon(this.components);
+            this.nyiTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // btnHide
@@ -44,10 +44,10 @@ namespace USB_Stolen
             this.btnHide.UseVisualStyleBackColor = true;
             this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
-            // a
+            // nyiTray
             // 
-            this.a.Text = "notifyIcon1";
-            this.a.Visible = true;
+            this.nyiTray.Text = "nyiTray";
+            this.nyiTray.Visible = true;
             // 
             // Form1
             // 
@@ -67,7 +67,7 @@ namespace USB_Stolen
         #endregion
 
         private System.Windows.Forms.Button btnHide;
-        private System.Windows.Forms.NotifyIcon a;
+        private System.Windows.Forms.NotifyIcon nyiTray;
     }
 }
 

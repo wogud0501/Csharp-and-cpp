@@ -114,7 +114,14 @@ namespace USB_Stolen
 
         private void btnHide_Click(object sender, EventArgs e)
         {
-
+            this.ShowInTaskbar = false;
+            this.ShowIcon = false;
+            VisibleChange(false, true);
+        }
+        private void VisibleChange(bool FormVisible, bool TrayIconVisible)
+        {
+            this.Visible = FormVisible;
+            this.nyiTray.Visible = TrayIconVisible;
         }
     }
 }
