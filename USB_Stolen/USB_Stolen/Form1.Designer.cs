@@ -48,6 +48,8 @@ namespace USB_Stolen
             // 
             this.nyiTray.Text = "nyiTray";
             this.nyiTray.Visible = true;
+            this.nyiTray.DoubleClick += new System.EventHandler(this.nyiTray_DoubleClick);
+            this.nyiTray.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.nyiTray_MouseDoubleClick);
             // 
             // Form1
             // 

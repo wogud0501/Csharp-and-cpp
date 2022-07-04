@@ -123,5 +123,17 @@ namespace USB_Stolen
             this.Visible = FormVisible;
             this.nyiTray.Visible = TrayIconVisible;
         }
+
+        private void nyiTray_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void nyiTray_DoubleClick(object sender, EventArgs e)
+        {
+            VisibleChange(true, false);
+            this.ShowInTaskbar = true;
+            this.ShowIcon = true;
+        }
     }
 }
