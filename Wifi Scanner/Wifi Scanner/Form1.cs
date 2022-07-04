@@ -18,13 +18,12 @@ namespace Wifi_Scanner
         Thread thrAP;
         // 델리게이트 선언
         private delegate void OnWifiViewDelegate(bool flags, object[] AddWifi);
-        //델리게이트 개체 생성
+        // 델리게이트 객체 생성
         private OnWifiViewDelegate OnView = null;
         public Form1()
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             OnView = new OnWifiViewDelegate(OnWifiList);
@@ -42,21 +41,20 @@ namespace Wifi_Scanner
                 {
                     object[] AddWifi = new object[7]
                     {
-                       network.dot11Ssid,
-                       network.wlanSignalQuality.ToString(),
-                       network.securityEnabled.ToString(),
-                       network.dot11Ssid.SSID,
-                       network.dot11DefaultCipherAlgorithm.ToString(),
-                       network.dot11DefaultAuthAlgorithm.ToString(),
-                       network.dot11Ssid.SSID };
+                        network.dot11Ssid,
+                        network.wlanSignalQuality.ToString(),
+                        network.securityEnabled.ToString(),
+                        network.dot11Ssid.SSID,
+                        network.dot11DefaultCipherAlgorithm.ToString(),
+                        network.dot11DefaultAuthAlgorithm.ToString(),
+                        network.dot11Ssid.SSID };
                     OnView.Invoke(false, AddWifi);
-
-                }
+                    }
                 Thread.Sleep(10000);
+                }
             }
-        }
         private void OnWifiList(bool flags, object[] AddWifi)
-        {   
+        {
             if (flags == true)
                 this.lvAP.Items.Clear();
             else
@@ -68,14 +66,14 @@ namespace Wifi_Scanner
                     AddWifi[2].ToString(),
                     GetMacChannel(1, ConvertToMAC((byte[])AddWifi[6])) });
                 this.lvAP.Items.Add(lvt);
+                }
             }
-        }
         private string GetMacChannel(int i, string Name)
         {
-            Wlan.WlanBssEntry[] IstWlanBss =
+            Wlan.WlanBssEntry[] lstWlanBss =
                 wlanClient.Interfaces[0].GetNetworkBssList();
             var reAP = "";
-            foreach (var oWlan in IstWlanBss)
+            foreach (var oWlan in lstWlanBss)
             {
                 if (i == 2)
                 {
@@ -86,7 +84,7 @@ namespace Wifi_Scanner
                 }
                 else if (i == 1)
                 {
-                    if(ConvertToMAC(oWlan.dot11Ssid.SSID) == Name)
+                    if (ConvertToMAC(oWlan.dot11Ssid.SSID) == Name)
                     {
                         var chnl = oWlan.chCenterFrequency.ToString();
                         switch (chnl)
@@ -133,11 +131,10 @@ namespace Wifi_Scanner
                         }
                     }
                 }
-                
+
             }
             return reAP;
         }
-
         private string ConvertToMAC(byte[] MAC)
         {
             string strMAC = "";
@@ -150,17 +147,15 @@ namespace Wifi_Scanner
             return Encoding.ASCII.GetString(ssid.SSID,
                 0, (int)ssid.SSIDLength);
         }
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (this.thrAP != null)
                 thrAP.Abort();
             Application.ExitThread();
         }
-
         private void lvAP_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
-    }
-}
+     }
+   }
