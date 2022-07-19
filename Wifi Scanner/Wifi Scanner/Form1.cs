@@ -12,6 +12,7 @@ using System.Threading;
 
 namespace Wifi_Scanner
 {
+
     public partial class Form1 : Form
     {
         WlanClient wlanClient = new WlanClient();

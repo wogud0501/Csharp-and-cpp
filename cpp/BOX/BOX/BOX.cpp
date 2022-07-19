@@ -15,7 +15,7 @@ private:
 
 public:
 	explicit Box(size_t l = 1, size_t w = 1, size_t h = 1) : length{ l }, width{ w }, height{ h } {}
-	double volume() const { return length * width * height; }5
+	double volume() const { return length * width * height; }
 	bool operator==(const Box& box) { return length == box.length && width == box.width && height == box.height; }
 
 	friend std::istream& operator>>(std::istream& in, Box& box);
