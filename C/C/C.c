@@ -1,13 +1,12 @@
 #include <stdio.h>
-#pragma warning(disable : 4996)
+#pragma warning ( disable : 4996)
+	
+int main(void)
+{
+	int a = 0;
+	float b = 0;
+	scanf("%d %f", &a, &b);
 
-int main() {
-	int i;
-	char d[21];
-	scanf("%s", &d);
-	for (i = 0; d[i] != '\0'; i++);
-	{
-		printf("\'%c\'", d[i]);
-	}
+	printf("%d %f", a, b);
 	return 0;
 }
