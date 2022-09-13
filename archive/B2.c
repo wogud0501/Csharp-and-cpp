@@ -6,18 +6,10 @@
 int main(void)
 
 {
-	int a, b, temp;
-	scanf("%d %d", &a, &b);
-
-	if (a > b) {
-		temp = a;
-		a = b;
-		b = temp;
+	int a = 0;
+	while (a < 5) {
+		printf("Hello, world!\n");
+		a++;
 	}
-
-	for (int i = a; i <= b; i++) {
-		printf("%d", i);
-	}
-
 	return 0;
 }

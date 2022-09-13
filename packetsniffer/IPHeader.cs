@@ -72,10 +72,11 @@ namespace mook_PacketSniffer
                 {
                     return "IP v6";
                 }
-                else
+                else if ((byVersionAndHeaderLength >> 4) == 8)
                 {
-                    return "Unknown";
-                }
+                    return "IP v8";
+                } else
+                return "Unknown";            
             }
         }
 
