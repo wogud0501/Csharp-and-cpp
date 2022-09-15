@@ -4,7 +4,7 @@
 #pragma warning ( disable : 4996 )
 #pragma warning ( disable : 4474 )
 
-int main(void) {
+int main() {
     int a;
     scanf("%X", &a);
     for (int i = 1; i <= 15; i++) {
