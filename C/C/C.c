@@ -5,10 +5,38 @@
 #pragma warning ( disable : 4474 )
 
 int main() {
-    int a;
-    scanf("%X", &a);
-    for (int i = 1; i <= 15; i++) {
-        printf("%X*%X=%X\n", a, i, (i * a));
-    }
-    return 0;
+	int a, b, c, d, e;
+	int max;
+	int min;
+
+	scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
+	max = a;
+	min = a;
+
+	if (b > max) {
+		max = b;
+	}
+	if (c > max) {
+		max = c;
+	}
+	if (d > max) {
+		max = d;
+	}
+	if (e > max) {
+		max = e;
+	}
+	if (b < min) {
+		min = b;
+	}
+	if (c < min) {
+		min = c;
+	}
+	if (d < min) {
+		min = d;
+	}
+	if (e < min) {
+		min = e;
+	}
+	printf("최대: %d\n", max);
+	printf("최소: %d\n", min);
 }
