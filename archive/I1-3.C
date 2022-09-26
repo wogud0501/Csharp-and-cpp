@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #pragma warning ( disable : 6031 )
 #pragma warning ( disable : 6271 )
 #pragma warning ( disable : 4996 )

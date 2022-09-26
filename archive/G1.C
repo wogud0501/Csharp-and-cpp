@@ -1,19 +1,15 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #pragma warning ( disable : 6031 )
 #pragma warning ( disable : 6271 )
 #pragma warning ( disable : 4996 )
 #pragma warning ( disable : 4474 )
 
-int main()
-{
-	for (int i = 0; i < 5; i++)
-	{
-		for (int j = 0; j < 5; j++)
-		{
-			if (j < i)
-				printf(" ");
-			else
-				printf("*");
+int main(void) {
+	int num = 5;
+
+	for (int i = 1; i <= num; i++) {
+		for (int j = 1; j <= num; j++) {
+			printf("*");
 		}
 		printf("\n");
 	}
