@@ -10,7 +10,7 @@ int main(void)
 	scanf("%d %d %d", &a, &b, &c);
 
 	for (int j = 1; j < c; j++) {
-		a += b;
+		a = b;
 	}
 	printf("%d", a);
 	return 0;
