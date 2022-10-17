@@ -10,9 +10,9 @@ int main() {
 
 	for (x = -3 * R; x <= 1 * R; x += 2) {
 		for (y = -R; y <= R; y++) {
-			if ((x * x + y * y) >= R * R - R / 0.185 && (x * x + y * y) <= R * R + R / 0.185)
+			if ((x * x + y * y) >= R * R - R / 0.185 && (x * x + y * y) <= R * R + R / 1.2)
 
-				printf("■");
+				printf("*");
 
 			else
 
