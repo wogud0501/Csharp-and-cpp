@@ -61,6 +61,8 @@
     "F1.C": "cpp",
     "I1.C": "cpp",
     "J1-2.C": "cpp",
-    "J1.C": "cpp"
+    "J1.C": "cpp",
+    "Test.C": "cpp",
+    "I1-3.C": "cpp"
   }
 }
