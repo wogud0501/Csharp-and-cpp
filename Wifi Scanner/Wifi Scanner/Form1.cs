@@ -141,8 +141,9 @@ namespace Wifi_Scanner
                             case "2492000":
                                 reAP = "17";
                                 break;
-
-
+                            case "2497000":
+                                reAP = "18";
+                                break;
                         }
                     }
                 }
